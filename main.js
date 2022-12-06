@@ -7,7 +7,7 @@ const displayId = (id) => {
 };
 
 const displayAdvice = (quote) => {
-  blockquote.textContent = quote;
+  blockquote.innerHTML = `&ldquo; ${quote}&rdquo;`;
 };
 
 const displayError = (msg) => {

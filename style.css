@@ -60,6 +60,7 @@ body {
   color: var(--color-heading);
   letter-spacing: 4px;
   font-size: var(--fsz-mob-s);
+  font-weight: bold;
 }
 
 .advice-para {
