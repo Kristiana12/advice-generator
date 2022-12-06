@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  /* Colors */
+  --color-background: hsl(218, 23%, 16%);
+  --color-background-container: hsl(217, 19%, 24%);
+  --color-heading: hsl(150, 100%, 66%);
+  --color-text: hsl(193, 38%, 86%);
+  --color-error: crimson;
+
+  /* Font-sizes */
+  --fsz-mob-s: 0.75rem;
+  --fsz-mob-m: 1.5rem;
+  --fsz-desk-s: 0.85rem;
+  --fsz-desk-m: 1.75rem;
+
+  /* Paddings */
+  --pad-mob-sides: 1.5rem;
+  --pad-mob-top: 2.5rem;
+  --pad-mob-bottom: 4rem;
+
+  --pad-desk-sides: 3rem;
+  --pad-desk-top: 3rem;
+  --pad-desk-bottom: 4.5rem;
+}
+
+/* change on select except from images */
+::selection:not(img) {
+  color: var(--color-heading);
+  background-color: var(--color-background);
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-background);
+  font-family: 'Manrope', sans-serif;
+}
+
+.advice-container {
+  text-align: center;
+  width: min(90%, 540px);
+  margin: 0 auto;
+  background-color: var(--color-background-container);
+  border-radius: 10px;
+  padding: var(--pad-mob-top) var(--pad-mob-sides) var(--pad-mob-bottom);
+  position: relative;
+}
+
+.advice-id {
+  text-transform: uppercase;
+  color: var(--color-heading);
+  letter-spacing: 4px;
+  font-size: var(--fsz-mob-s);
+}
+
+.advice-para {
+  margin: 1.5rem auto 2rem;
+  color: var(--color-text);
+  font-weight: 800;
+  font-size: var(--fsz-mob-m);
+  line-height: 1.6;
+}
+
+/* imgs */
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DICE */
+button.advice-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-heading);
+  border: 0;
+  cursor: pointer;
+  /* effect */
+  transition: box-shadow 0.3s ease-in-out;
+
+  /* position */
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button.advice-btn:hover,
+button.advice-btn:active {
+  box-shadow: 2px 2px 20px 3px var(--color-heading);
+}
+
+.dice {
+  width: 24px;
+  height: 24px;
+}
+
+@media only screen and (min-width: 600px) {
+  .advice-container {
+    padding: var(--pad-desk-top) var(--pad-desk-sides) var(--pad-desk-bottom);
+  }
+
+  .advice-id {
+    font-size: var(--fsz-desk-s);
+  }
+
+  .advice-para {
+    margin: 1.5rem auto 2.5rem;
+    font-size: var(--fsz-desk-m);
+  }
+}
+
+/* Utilty Classes */
+.error {
+  color: var(--color-error);
+}

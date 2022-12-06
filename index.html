@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Advice generator app</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <!-- 
+    Advice #Advice ID goes here -->
+
+    <!-- Advice text goes here -->
+
+    <main>
+      <div class="advice-container">
+        <p class="advice-id">advice #<span id="id-nr"></span></p>
+        <blockquote class="advice-para"></blockquote>
+        <picture>
+          <source
+            media="(max-width: 599px)"
+            srcset="images/pattern-divider-mobile.svg"
+          />
+          <source
+            media="(min-width: 599px)"
+            srcset="images/pattern-divider-desktop.svg"
+          />
+          <img src="images/pattern-divider-mobile.svg" alt="" />
+        </picture>
+        <button class="advice-btn">
+          <img class="dice" src="images/icon-dice.svg" alt="dice" />
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
